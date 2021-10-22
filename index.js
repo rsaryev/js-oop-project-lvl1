@@ -1,6 +1,7 @@
 import StringValidator from './src/String'
 import NumberValidator from './src/Number'
 import ArrayValidator from './src/Array'
+import ObjectValidator from './src/Object'
 
 export default class {
   string () {
@@ -11,5 +12,8 @@ export default class {
   }
   array() {
     return new ArrayValidator()
+  }
+  object() {
+    return new ObjectValidator()
   }
 }

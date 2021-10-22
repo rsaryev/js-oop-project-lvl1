@@ -4,7 +4,7 @@ import Validator from './index'
 export default class ArrayValidator extends Validator {
   constructor () {
     super()
-    this.schema = yup.array()
+    this.schema = yup.array().nullable(true)
   }
 
   sizeof(size) {

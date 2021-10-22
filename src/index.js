@@ -1,6 +1,6 @@
 export default class Validator {
-  isValid (text) {
-    return this.schema.isValidSync(text)
+  isValid (data) {
+    return this.schema.isValidSync(data)
   }
   required () {
     this.schema = this.schema.required()

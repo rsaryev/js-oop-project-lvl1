@@ -4,7 +4,7 @@ import Validator from './index'
 export default class NumberValidator extends Validator {
   constructor () {
     super()
-    this.schema = yup.number()
+    this.schema = yup.number().nullable(true)
   }
   positive () {
     this.schema = this.schema.positive()

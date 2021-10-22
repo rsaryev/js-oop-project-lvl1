@@ -4,7 +4,7 @@ import * as yup from 'yup'
 export default class StringValidator extends Validator {
   constructor () {
     super()
-    this.schema = yup.string()
+    this.schema = yup.string().nullable(true)
   }
   minLength (length) {
     this.schema = this.schema.min(length)
