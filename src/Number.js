@@ -6,10 +6,6 @@ export default class NumberValidator extends Validator {
     super()
     this.schema = yup.number()
   }
-  required () {
-    this.schema = this.schema.required()
-    return this
-  }
   positive () {
     this.schema = this.schema.positive()
     return this

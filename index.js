@@ -1,5 +1,6 @@
 import StringValidator from './src/String'
 import NumberValidator from './src/Number'
+import ArrayValidator from './src/Array'
 
 export default class {
   string () {
@@ -7,5 +8,8 @@ export default class {
   }
   number() {
     return new NumberValidator()
+  }
+  array() {
+    return new ArrayValidator()
   }
 }
