@@ -9,7 +9,9 @@
     "node": ">=14"
   },
   "scripts": {
-    "test": "npx jest --bail"
+    "test": "npx jest --bail",
+    "lint:all": "eslint \"./**/*.js\"",
+    "lint:fix": "eslint \"./**/*.js\" --fix"
   },
   "repository": {
     "type": "git",

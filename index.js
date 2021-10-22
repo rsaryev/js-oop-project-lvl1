@@ -1,2 +1,3 @@
-import Validator from './src/index'
-export default Validator
+import Validator from './src/index';
+
+export default Validator;
