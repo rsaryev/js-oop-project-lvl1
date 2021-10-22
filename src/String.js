@@ -1,9 +1,10 @@
-import Validator from './index'
+import Validator from './Validator'
 import * as yup from 'yup'
 
 export default class StringValidator extends Validator {
-  constructor () {
+  constructor (customValidators) {
     super()
+    this.customValidators = customValidators.string
     this.schema = yup.string().nullable(true)
   }
   minLength (length) {

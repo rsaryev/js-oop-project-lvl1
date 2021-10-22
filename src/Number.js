@@ -1,5 +1,5 @@
 import * as yup from 'yup'
-import Validator from './index'
+import Validator from './Validator'
 
 export default class NumberValidator extends Validator {
   constructor () {

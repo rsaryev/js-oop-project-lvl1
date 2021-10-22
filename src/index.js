@@ -1,9 +1,30 @@
-export default class Validator {
-  isValid (data) {
-    return this.schema.isValidSync(data)
+import StringValidator from './String'
+import NumberValidator from './Number'
+import ArrayValidator from './Array'
+import ObjectValidator from './Object'
+
+export default class {
+  constructor () {
+    this.customValidators = {}
   }
-  required () {
-    this.schema = this.schema.required()
-    return this
+  string () {
+    return new StringValidator(this.customValidators)
+  }
+  number() {
+    return new NumberValidator(this.customValidators)
+  }
+  array() {
+    return new ArrayValidator(this.customValidators)
+  }
+  object() {
+    return new ObjectValidator(this.customValidators)
+  }
+  addValidator(type, name, fn) {
+    if (!this.customValidators[type]) {
+      this.customValidators[type]= {}
+    }
+    this.customValidators[type][name] = {
+      fn
+    }
   }
 }
