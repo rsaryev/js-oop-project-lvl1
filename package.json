@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "[![Actions Status](https://github.com/rsaryev/js-oop-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/rsaryev/js-oop-project-lvl1/actions)",
   "bin": {
-    "nodejs-package": "validate.js"
+    "nodejs-package": "index.js"
   },
   "engines": {
     "node": ">=14"
